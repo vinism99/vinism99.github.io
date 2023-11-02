@@ -1,0 +1,163 @@
+/* estilos e configurações globais */
+* {
+    padding: 0; /* Remove preenchimento interno padrão de todos os elementos */
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    box-sizing: border-box; /* Faz com que largura e altura incluam borda e preenchimento */
+    font-family: 'Poppins', sans-serif; /* Define a fonte principal e fallback */
+    list-style: none; /* Remove marcadores de lista padrão */
+    text-decoration: none; /* Remove decorações de texto padrão, como sublinhado */
+    }
+  
+  /* Estilos para o cabeçalho */
+    header {
+    position: fixed; /* Fixa o cabeçalho no topo da janela */
+    right: 0; /* Alinha o cabeçalho à direita */
+    top: 0; /* Alinha o cabeçalho ao topo */
+    z-index: 1000; /* Define a ordem de empilhamento (fica acima de outros elementos) */
+    width: 100%; /* Ocupa toda a largura da janela */
+    display: flex; /* Usa layout flexível para os elementos do cabeçalho */
+    align-items: center; /* Alinha elementos verticalmente ao centro */
+    justify-content: space-between; /* Cria espaço igual entre os elementos internos */
+    padding: 33px 9%; /* Adiciona preenchimento ao cabeçalho */
+    background: transparent; /* Define um fundo transparente */
+    }
+  
+  /* Estilos para o corpo da página */
+    body {
+    background: #12121c; /* Define a cor de fundo do corpo da página */
+    }
+  
+  /* Estilos para a lista de navegação */
+    .listanav {
+    display: flex; /* Usa layout flexível para os elementos da lista de navegação */
+    }
+  
+    .listanav a {
+    color: white; /* Define a cor do texto como branco */
+    margin-left: 60px; /* Adiciona margem à esquerda entre os elementos da lista */
+    font-size: 17px; /* Define o tamanho da fonte */
+    font-weight: 600; /* Define o peso da fonte (negrito) */
+    border-bottom: 5px solid transparent; /* Adiciona uma borda inferior transparente */
+    transition: all 0.55s ease; /* Adiciona transição suave de 0.55 segundos em hover */
+    }
+  
+    .listanav a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255); /* Altera a borda inferior para 2px sólidos em hover */
+    }
+  
+  /* Estilos para a seção de introdução */
+    .intro {
+    height: 100vh; /* Define a altura da seção como a altura da janela do navegador */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    }
+  
+  /* Estilos para o texto de introdução */
+    .intro-text {
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    margin-top: 130px; /* Adiciona uma margem superior para empurrar o texto para baixo */
+    }
+  
+    .intro-text h1 {
+    font-size: 90px; /* Define o tamanho da fonte */
+    font-weight: 700; /* Define o peso da fonte como 700 (negrito) */
+    color: white; /* Define a cor do texto como branco */
+    }
+  
+    .intro-text h2 {
+    line-height: 1; /* Define a altura da linha como 1 */
+    color: white; /* Define a cor do texto como branco */
+    }
+  
+    .intro-text p {
+    line-height: 1; /* Define a altura da linha como 1 */
+    color: white; /* Define a cor do texto como branco */
+    margin: 0 0 45px; /* Adiciona margem na parte inferior do texto */
+    }
+  
+  /* Estilos para o contêiner de pesquisa */
+    .search-container {
+    display: flex; /* Usa layout flexível para os elementos do contêiner de pesquisa */
+    align-items: center; /* Alinha elementos verticalmente ao centro */
+    justify-content: center; /* Centraliza horizontalmente a barra de pesquisa */
+    border: 1px solid #ccc; /* Adiciona uma borda de 1px sólida com a cor #ccc */
+    padding: 5px; /* Adiciona preenchimento de 5px */
+    border-radius: 5px; /* Arredonda os cantos com um raio de 5px */
+    width: 600px; /* Define a largura como 300px */
+    background-color: rgba(255, 255, 255, 0.5); /* Define o fundo como semi-transparente (cor branca com 50% de transparência) */
+    }
+  
+  /* Estilos para o campo de pesquisa */
+    .search-container input {
+    flex: 1; /* Ocupa todo o espaço disponível na largura */
+    border: none; /* Remove a borda do campo de pesquisa */
+    outline: none; /* Remove o contorno em foco */
+    background: transparent; /* Define o fundo do campo de pesquisa como transparente */
+    }
+  
+  /* Estilos para a imagem da lupa */
+    .search-container img {
+    width: 20px; /* Define a largura da imagem como 20px */
+    height: 20px; /* Define a altura da imagem como 20px */
+    margin-left: 5px; /* Adiciona margem à esquerda da imagem */
+    cursor: pointer; /* Define o cursor como um ponteiro ao passar o mouse sobre a imagem */
+    }
+  
+    .categorias {
+    display: flex;
+    justify-content: center; /* Alinha no centro horizontal */
+    }
+  
+    .categoria {
+    width: 200px; /* Reduz a largura dos retângulos */
+    height: 200px; /* Define a altura dos retângulos */
+    margin: 10px; /* Adiciona espaçamento entre os retângulos */
+    border-radius: 20px; /* Arredonda as extremidades */
+    overflow: hidden; /* Garante que a imagem de fundo fique dentro do retângulo arredondado */
+    background-color: #313131; /* Cor de fundo do retângulo */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do retângulo */
+    }
+  
+    .categoria-imagem {
+    max-width: 50%; /* Define a largura máxima da imagem como 100% do contêiner */
+    max-height: 50%; /* Define a altura máxima da imagem como 100% do contêiner */
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Altura da imagem de fundo */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+  
+    .categoria-imagem h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    }
+
+    .categoria {
+    /* ... outros estilos ... */
+    transition: opacity 0.3s; /* Adiciona uma transição de 0.3 segundos para a propriedade de opacidade */
+    }
+  
+    .categoria:hover {
+    opacity: 0.2; /* Reduz a opacidade quando o mouse passar por cima */
+    }
+  
+    .nav-bar {
+    background-color: #313131; /* Cor de fundo cinza */
+    width: 50%;
+    padding: 10px 0; /* Espaçamento interno para espaçar o conteúdo da barra de navegação */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo da barra de navegação */
+    justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
+    border-radius: 10px; /* Adiciona um arredondamento de 10px aos cantos */
+    }

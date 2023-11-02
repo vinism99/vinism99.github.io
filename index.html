@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site que irá te ajudar a encontrar a imagem ao seu gosto">
+    <!-- Título da aba no navegador -->
+    <title>WALL-img - Imagens para seu gosto</title>
+
+    <!-- Link para o .css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Link para Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Link para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header> <!-- Cabeçalho -->
+        <img src="assets/images/logo.png" alt="Logo do site" height="80">
+        <div class="nav-bar">
+        <ul class="listanav">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Recentes</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tops</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="logo-menu"></div>
+    </header>
+
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Bem-Vindo ao</h2>
+            <h1>WALL-img</h1>
+            <p>Aqui você pode encontrar a imagem que você gosta!</p>
+
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar">
+                <img src="assets/images/lupa.png" alt="Ícone de busca">
+            </div>
+        </div>
+    </section>
+
+    <section class="categorias">
+        <a href="pagina_categoria_paisagens.html" class="categoria">
+          <div class="categoria-imagem" style="background-image: url('paisagens.png');">
+            <img src="assets/images/paisagens.png" alt="imagem paisagens">
+            <h3>Paisagens</h3>
+          </div>
+        </a>
+        <a href="pagina_categoria_animais.html" class="categoria">
+          <div class="categoria-imagem" style="background-image: url('animais.png');">
+            <img src="assets/images/animais.png" alt="imagem animais">
+            <h3>Animais</h3>
+          </div>
+        </a>
+        <a href="pagina_categoria_fantasia.html" class="categoria">
+          <div class="categoria-imagem" style="background-image: url('fantasia.png');">
+            <img src="assets/images/fantasia.png" alt="imagem fantasia">
+            <h3>Fantasia</h3>
+          </div>
+        </a>
+        <a href="pagina_categoria_montanhas.html" class="categoria">
+          <div class="categoria-imagem" style="background-image: url('montanhas.png');">
+            <img src="assets/images/montanhas.png" alt="imagem montanhas">
+            <h3>Montanhas</h3>
+          </div>
+        </a>
+      </section>
+
+    <!-- Link para o JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
