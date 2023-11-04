@@ -28,11 +28,11 @@
     }
     
     /* Estilos para a lista de navegação */
-    .listanav {
+    .nav-list {
       display: flex; /* Usa layout flexível para os elementos da lista de navegação */
     }
     
-    .listanav a {
+    .nav-list a {
       color: white; /* Define a cor do texto como branco */
       margin-left: 35px; /* Adiciona margem à esquerda entre os elementos da lista */
       font-size: 17px; /* Define o tamanho da fonte */
@@ -41,7 +41,7 @@
       transition: all 0.55s ease; /* Adiciona transição suave de 0.55 segundos em hover */
     }
     
-    .listanav a:hover {
+    .nav-list a:hover {
       border-bottom: 2px solid rgb(255, 255, 255); /* Altera a borda inferior para 2px sólidos em hover */
     }
     
@@ -148,16 +148,6 @@
       opacity: 0.2; /* Reduz a opacidade quando o mouse passar por cima */
     }
     
-    .nav-bar {
-      background-color: #313131; /* Cor de fundo cinza */
-      width: 40%;
-      padding: 10px 0; /* Espaçamento interno para espaçar o conteúdo da barra de navegação */
-      display: flex;
-      align-items: center; /* Centraliza verticalmente o conteúdo da barra de navegação */
-      justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
-      border-radius: 10px; /* Adiciona um arredondamento de 10px aos cantos */
-    }
-
     .intro {
       display: flex;
       justify-content: center;
@@ -221,10 +211,8 @@
 
 
 
-
-
-    
-    @media only screen and (max-width: 800px){
+    /* Configurações para mobile */
+    @media only screen and (max-width: 900px){
 
     .intro {
       font-size: 80%;
@@ -249,7 +237,7 @@
       height: 40px;
     }
 
-    .listanav{
+    .nav-list{
       display: none;
     }
     .categoria-imagem h3 {
@@ -263,3 +251,94 @@
     }
 
   }
+
+  /* Estilos para o menu de hambúrguer */
+.menu-mobile {
+  position: fixed;
+  top: 24px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+#checkbox-menu {
+  position: absolute;
+  opacity: 0;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 22px;
+  width: 30px;
+}
+
+label span {
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 30px;
+  background: #ffffff;
+  transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+  top: 0;
+}
+
+label span:nth-child(2) {
+  top: 8px;
+}
+
+label span:nth-child(3) {
+  top: 16px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3) {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+/* Estilos para a lista de links */
+.menu-links {
+  position: absolute;
+  top: 50px; /* Ajuste a distância da parte superior conforme necessário */
+  right: 0;
+  display: none; /* Inicialmente oculto */
+  list-style: none;
+  background: #12121c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-links li {
+  margin: 5px 0;
+}
+
+.menu-links a {
+  color: #fff;
+  text-decoration: none;
+}
+/* Estilos para o menu de hambúrguer */
+.menu-mobile {
+  display: block; /* Visível por padrão */
+}
+
+/* Estilos para o menu de hambúrguer que oculta em telas maiores (computadores) */
+@media only screen and (min-width: 900px) {
+  .menu-mobile {
+    display: none;
+  }
+}
