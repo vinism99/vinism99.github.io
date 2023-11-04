@@ -218,3 +218,48 @@
     header.scroll img {
       opacity: 0.7; /* Torna a logo mais transparente */
     }
+
+
+
+
+
+    
+    @media only screen and (max-width: 800px){
+
+    .intro {
+      font-size: 80%;
+    }
+
+    .intro-text h1 {
+      font-size: 60px;
+    }
+
+    .categoria{
+      width: 100%;
+      height: auto;
+    }
+
+    .search-container{
+      width: 90%;
+      height: auto; 
+    }
+
+    .nav-bar{
+      width: 20%;
+      height: 40px;
+    }
+
+    .listanav{
+      display: none;
+    }
+    .categoria-imagem h3 {
+      font-size: 8px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .categoria-imagem{
+      margin-top: 30px;
+    }
+
+  }

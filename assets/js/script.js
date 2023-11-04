@@ -4,4 +4,3 @@ document.querySelector('a[href="#categorias"]').addEventListener('click', functi
     // Rola a página para a seção de categorias com suavidade
     document.querySelector('#categorias').scrollIntoView({ behavior: 'smooth' });
   });
-  
