@@ -20,12 +20,12 @@ hr { /*separador das páginas*/
 
 .menu { /* Barra de navegação */
     position: fixed;
+    margin-left: 3%;
     top: 10px; 
     width: 100vh;
     z-index: 1000;
     background-color: #1d1d1d;
     border-radius: 15px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
@@ -39,7 +39,7 @@ hr { /*separador das páginas*/
     border-bottom: 5px solid transparent;
 }
 .menu a:hover { /* Animação da barra de navegação */
-    background-color: #141413;
+    background-color: #0f0f0f;
     border-bottom: 3px solid #ffc039;
     border-radius: 4px;
 }
@@ -68,15 +68,16 @@ hr { /*separador das páginas*/
     height: auto;
 }
 .intro-container { /* Container da introdução */
-    min-height: 50vh; 
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: #1d1d1d;
     border-radius: 50px;
-    padding: 4vw; 
+    margin: 0 3%;
 }
+
 .intro-text { /* Texto da introdução */
     flex: 1;
 }
@@ -145,9 +146,9 @@ h2::after{
 }
 
 .projeto-item img {
-    width: 80%;
-    margin: 50px;
-    transition: transform 0.3s ease; 
+    width: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
 }
 
 .projeto-item:hover img {
@@ -159,7 +160,7 @@ h2::after{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.75); 
+    background-color: rgb(0, 0, 0); 
     color: white;
     padding: 10px;
     transform: translateY(100%); 
@@ -168,6 +169,7 @@ h2::after{
 
 .projeto-item:hover .projeto-info {
     transform: translateY(0); /* Move a barra para cima para cobrir a imagem ao passar o mouse */
+    
 }
 
 .projeto-info h3,
@@ -200,6 +202,7 @@ h2::after{
 
 .sobre h4{
     text-justify: auto;
+    margin: 80px;
 }
 
 .titulo-contato {
@@ -236,21 +239,56 @@ h2::after{
     opacity: 0.8;
 }
 
-/* Estilos para os cartões de fundo */
-.card-background {
-    position: absolute; 
-    top: 0; 
-    left: 0;
-    right: 0; 
-    bottom: 0; 
-    background-color: #333; 
-    z-index: -1; 
-    border-radius: 50px; 
-}
+/* Configurações para mobile */
+@media only screen and (max-width: 900px){
 
-/* Adicione o posicionamento relativo aos contêineres das habilidades */
-.habilidades .hard-skills, .habilidades .soft-skills {
-    position: relative; 
-    padding: 20px; 
-    margin: 100px;
-}
+    body {
+        font-size: 13px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .menu{
+        max-width: 90%;
+    }
+
+    .intro-container{
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .intro-img{
+        max-width: 60%;
+    }
+
+    .intro h3 {
+        font-size:small;
+    }
+
+    .intro h1 {
+        font-size:large;
+    }
+    
+    .intro h4 {
+        font-size:smaller;
+    }
+
+    .botao-sobre a{
+        margin: 15px;
+    }
+
+    .habilidades img{
+        max-width: 20%
+    }
+
+    .projeto-info{
+        padding: 8px;
+    }
+
+@media only screen and (min-width: 600px) {
+
+    .menu {
+        display: none;
+    }
+
+}}
